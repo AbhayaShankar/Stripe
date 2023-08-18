@@ -79,6 +79,7 @@ const express = require("express");
 
 // TODO: Add the pub key to configure the stripe
 const stripe = require("stripe")("");
+const uuid = require("uuid/v4");
 
 const app = express();
 
