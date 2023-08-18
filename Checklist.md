@@ -18,3 +18,31 @@ second one is the `idempotency key` which ensures that transaction for a particu
 
 ### Frontend
 
+`npm i react-stripe-checkout`
+`cdn for Materialize css`
+
+Little bit refractoring the code.
+
+- import StripeCheckout from "react-stripe-checkout";
+- import React, { useState } from "react";
+
+Set up a state for product : 
+
+```js
+ const [product, setproduct] = useState({
+    name: "Luffy gear 5 Bobblehead",
+    price: 35,
+    productBy: "Abhaya++",
+  });
+```
+
+Then basic text, img and our `StripeCheckout` component with 2 mandatory keys : `stripeKey` and `token`.
+
+```js
+      <p>Luffy Gear 5</p>
+      <img src={cover} alt="cover-img" />
+
+      <StripeCheckout stripeKey="" token={""} name="Buy Bobblehead">
+        <button className="btn-large red darken-4"> Buy BobbleHead Now</button>
+      </StripeCheckout>
+```

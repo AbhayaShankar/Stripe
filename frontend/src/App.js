@@ -4,7 +4,7 @@ import StripeCheckout from "react-stripe-checkout";
 import cover from "./cover.webp";
 
 function App() {
-  const [product, setproduct] = useState({
+  const [product, setProduct] = useState({
     name: "Luffy gear 5 Bobblehead",
     price: 35,
     productBy: "Abhaya++",
@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <p>Luffy Gear 5</p>
       <img src={cover} alt="cover-img" />
+      <span>{product.name}</span>
 
       <StripeCheckout stripeKey="" token={""} name="Buy Bobblehead">
         <button className="btn-large red darken-4"> Buy BobbleHead Now</button>
