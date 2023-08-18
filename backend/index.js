@@ -24,24 +24,33 @@ app.post("/payment", async (req, res) => {
   // Special key for ensuring a user is charged only once for his/her products.
   const idemPotencyKey = uuidv4();
 
-  return stripe.customers
-    .create({
+  try {
+    const customer = await stripe.customers.create({
       email: token.email,
       source: token.id,
-    })
-    .then((customer) => {
-      stripe.charges.create(
-        {
-          amount: product.price * 100,
-          currency: "usd",
-          customer: customer.id,
-          receipt_email: token.email,
+    });
+
+    const charge = await stripe.charges.create(
+      {
+        amount: product.price * 100,
+        currency: "usd",
+        customer: customer.id,
+        receipt_email: token.email,
+        description: `Purchase of ${product.name}`,
+        shipping: {
+          name: token.card.name,
+          address: {
+            country: token.card.address_country,
+          },
         },
-        { idemPotencyKey }
-      );
-    })
-    .then((result) => res.status(200).json(result))
-    .catch((err) => console.log(err));
+      },
+      { idemPotencyKey }
+    );
+
+    res.status(200).json(charge);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 // Listen
