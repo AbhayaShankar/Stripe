@@ -1,8 +1,9 @@
 const cors = require("cors");
 const express = require("express");
+require("dotenv").config();
 
 // TODO: Add the pub key to configure the stripe
-const stripe = require("stripe")("");
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 const { v4: uuidv4 } = require("uuid");
 
 const app = express();
