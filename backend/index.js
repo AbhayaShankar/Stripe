@@ -53,7 +53,7 @@ app.post("/payment", async (req, res) => {
   }
 });
 
-// Listen
+// Listening on port
 const port = process.env.PORT || 5000;
 
 const start = async () => {

@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import StripeCheckout from "react-stripe-checkout";
+import cover from "./cover.webp";
 
 function App() {
+  const [product, setproduct] = useState({
+    name: "Luffy gear 5 Bobblehead",
+    price: 35,
+    productBy: "Abhaya++",
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Luffy Gear 5</p>
+      <img src={cover} alt="cover-img" />
+
+      <StripeCheckout stripeKey="" token={""} name="Buy Bobblehead">
+        <button className="btn-large red darken-4"> Buy BobbleHead Now</button>
+      </StripeCheckout>
     </div>
   );
 }
