@@ -69,3 +69,49 @@ Add the following script in the `package.json` file
 ```
 
 Well Kudos! You successfully created the backend setup for this project. Give yourself a pat on the back, and lets move forward with the backend logic.
+
+
+Moving on with the basic setup for `index.js` file : 
+
+```js
+const cors = require("cors");
+const express = require("express");
+
+// TODO: Add the pub key to configure the stripe
+const stripe = require("stripe")("");
+
+const app = express();
+
+//middlewares
+app.use(cors());
+app.use(express.json());
+
+// routes
+app.get("/", (req, res) => {
+  res.send("IT WORKS...");
+});
+
+// Listen
+const port = process.env.PORT || 5000;
+
+const start = async () => {
+  try {
+    app.listen(port, () => {
+      console.log(`Server listening on PORT ${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
+
+
+```
+
+Copy paste the file into `index.js` and then spin the server by running the command 
+```bash 
+npm start
+```
+
+This will spin up the server, open up the console and if you can see `Server is running on  port 5000` , go to `http://localhost:5000/` and if you see IT WORKS, you are good to go. If in case you are getting any errors, please troubleshoot. Make sure you are in the backend dir when you run `npm start`

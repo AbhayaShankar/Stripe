@@ -1,0 +1,2 @@
+- Basic Setup - frontend  / Backend
+- Add index.js file in backend folder.
