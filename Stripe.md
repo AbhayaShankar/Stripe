@@ -1,9 +1,12 @@
--------------------
-
-title: Stripe Paymnet Integration
-
--------------------
-
+---
+title: "Stripe Payment Integration"
+date: "2023-08-26"
+slug: "stripe-payment-integration"
+image: "stripe.png"
+excerpt: "Stripe payment integration streamlines online transactions, offering secure and efficient payment processing for businesses, simplifying customer transactions."
+isFeatured: true
+isPublished: true
+---
 
 ## 👋 Welcome to Stripe Integration
 
