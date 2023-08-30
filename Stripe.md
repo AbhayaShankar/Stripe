@@ -4,12 +4,36 @@ title: Stripe Paymnet Integration
 
 -------------------
 
-## Starting Off...
+
+## 👋 Welcome to Stripe Integration
+
+My name is Abhaya Shankar and I'll be guiding you for this short project.
+
+## 📖 What You will be learning ?
+
+1. How to Integrate Stripe Payment Gateway in your React Project.
+
+## 🤏 Prerequisites
+
+- If you have worked with javascript and React, then you will be good to go.
+- You need to have <a href="https://nodejs.org/en"> Node </a> installed.
+- Make sure you install the dependent packages.
+- And a cup of coffee. ☕
+
+## ⚒️ What are we Building ?
+
+We are building a simple project for Integrating Stripe into React Project for Payments.
+
+Then We will Buy a Luffy gear 5 Bobblehead because I am an Anime nerd and a big fan of One Piece, you should try it too.
+
+Well anyway, Hope you have your coffee. Take a sip of your coffee and let's build this.
+
+## 🚀 Starting Off...
 
  For Stripe Payment Integration we require 2 basic things - a frontend where user can enter his card details and continue to pay and a backend where the validation checks and authentication is taken care of for smooth transaction process.
 
 
-## Basic Setup
+## 🔧 Basic Frontend Setup
 
 - FRONTEND : CRA Template  
 
@@ -19,6 +43,7 @@ title: Stripe Paymnet Integration
 
   Let this package install all the dependencies and in the meanwhile lets proceed with the backend setup as well. 
 
+## 🔧 Basic Backend Setup
 
 - BACKEND - Setup
 
