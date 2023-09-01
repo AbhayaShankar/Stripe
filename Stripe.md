@@ -230,3 +230,7 @@ npm start
 
 This will spin up the server, open up the console and if you can see `Server is running on  port 5000` , go to `http://localhost:5000/` and if you see **IT WORKS** displayed on the screen, well you did it, You created a basic route in Express. If in case you are getting any errors, please troubleshoot. Make sure you are in the backend dir when you run `npm start`.
 
+Now inorder to use Stripe, you need to first create an account on [Stripe](https://dashboard.stripe.com/register). If you have an account already then you can login and access the stripe dashboard which will look something like this.
+
+
+
